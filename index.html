@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Title -->
+        <title>JavaScript Calculator</title>
+        <!-- CSS bootstrap link -->
+        <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"crossorigin="anonymous">
+        <link type="text/stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Css styles -->
+        <style>
+            /* to make the margin to 0 */
+            *{
+                margin:0px;
+          }
+            /* submit button */
+            #submit{
+                width:100%;
+            }
+            /* heading */
+            .heading{
+                font-size: 45px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                padding: 20px;
+            }
+            /* submit button */
+            #submit{
+                margin-top: 30px;
+                margin-bottom: 30px;
+                background-color: aquamarine;
+                border: groove;
+                border-top-right-radius:50px;
+                border-top-left-radius:50px;
+
+            }
+            /* for changing the color of button */
+            #submit:hover{
+                background-color: rgb(227, 165, 85);
+                border-bottom-right-radius:50px;
+                border-bottom-left-radius:50px;
+                border-top-right-radius:0px;
+                border-top-left-radius:0px;
+            }
+            /* answer  heading*/
+            #answer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            /* operator */
+            #operator{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                color: rgb(122, 41, 235);
+            }
+            /* container */
+            .container{
+                
+                width: 100%;
+                height: 100%;
+            }
+            /* results */
+            #result{
+                text-align: center;
+                padding:10px 80px;
+                border-radius: 10px;
+                
+            }
+        </style>
+        <!-- container div -->
+        <div class="container">
+
+            <!-- heading -->
+            <div class="heading" style="text-align: center;">
+                <h style="text-align: center;">JavaScript Calculator</h>
+            </div>
+
+            <!-- bootstrap grid -->
+            <div class="row" >
+                <!-- number 1 input -->
+                <div class="col-xs-12 col-lg-4 col-xl-4">
+                    <p style="font-size: 22px; color: rgb(211, 19, 19);">Number 2</p>
+                    <span style="font-size: 22px;"></span><input class="input" id="number1" placeholder="Enter the First number">  
+                </div>
+                <!-- Operator -->
+                <div class="col-xs-12 col-lg-4 col-xl-4">
+                    <div id="operator">
+                        <h3>Operator</h3>
+                        <select name="" id="select" class="dropdown">
+                            <option value="select operator" id="option">Select Operator</option>
+                            <option value="+" id="option">+</option>
+                            <option value="-" id="option">-</option>
+                            <option value="*" id="option">*</option>
+                            <option value="/" id="option">/</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- number 1 input -->
+                <div class="col-xs-12 col-lg-4 col-xl-4">
+                    <p style="font-size: 22px; color: rgb(211, 19, 19);">Number 2</p>
+                    <span style="font-size: 22px;"></span><input class="input" id="number2" placeholder="Enter the Second number">
+                </div>
+            </div>
+                <!-- Submit button -->
+                <button  id="submit" onclick="calc();" class="btn">Submit</button><br><br>
+            
+                <h3 style="text-align: center;">Answer </h3>
+                <div id="answer">
+                    <br>
+                    <!-- shows result -->
+                    <input id="result" type="text" placeholder="Answer" class="answer">
+                </div>
+            
+
+
+
+        </div>
+        <!-- Java Script code for calculator-->
+        <script>
+            function calc(){
+                var x = parseInt(document.getElementById("number1").value);
+                var y =parseInt(document.getElementById("number2").value);
+                var oper=document.getElementById("select").value;
+                if(oper == '+'){
+                    var y = document.getElementById("result").value = x+y;
+                }
+                else if(oper == '-'){
+                    var y = document.getElementById("result").value = x-y;
+                }
+                else if(oper == '*'){
+                    var y = document.getElementById("result").value = x*y;
+                }
+                else if(oper == '/'){
+                    var y = document.getElementById("result").value = x/y;
+                }
+            }
+            calc();
+        </script>
+        
+    </body>
+</html>

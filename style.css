@@ -1,0 +1,56 @@
+*{
+    margin:0px;
+}
+/* submit button */
+#submit{
+    width:100%;
+}
+/* heading */
+.heading{
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+/* submit button */
+#submit{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: aquamarine;
+    border: groove;
+    border-top-right-radius:50px;
+    border-top-left-radius:50px;
+
+}
+/* for changing the color of button */
+#submit:hover{
+    background-color: rgb(227, 165, 85);
+    border-bottom-right-radius:50px;
+    border-bottom-left-radius:50px;
+    border-top-right-radius:0px;
+    border-top-left-radius:0px;
+}
+/* answer  heading*/
+#answer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* operator */
+#operator{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(122, 41, 235);
+}
+/* container */
+.container{
+    
+    width: 100%;
+    height: 100%;
+}
+/* results */
+#result{
+    text-align: center;
+    padding:10px 80px;
+    border-radius: 10px;
+    
+}
